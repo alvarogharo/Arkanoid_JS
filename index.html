@@ -21,19 +21,19 @@
 	</div>
 	<!-- Se añaden los archivos de sonido -->
 	<audio id="lostBall">
-		<source src="LostBall.wav"></source>
+		<source src="resources/LostBall.wav"></source>
 	</audio>
 	<audio id="brickBounce">
-		<source src="reboteladrillo.wav"></source>
+		<source src="resources/reboteladrillo.wav"></source>
 	</audio>
 	<audio id="levelStart">
-		<source src="levelstart.wav"></source>
+		<source src="resources/levelstart.wav"></source>
 	</audio>
 	<audio id="levelFinished">
-		<source src="levelfinished.wav"></source>
+		<source src="resources/levelfinished.wav"></source>
 	</audio>
 	<audio id="reboteBarrita">
-		<source src="rebotebarrita.wav"></source>
+		<source src="resources/rebotebarrita.wav"></source>
 	</audio>
 	
     <script type="text/javascript">
@@ -60,7 +60,7 @@
 		
 		//Fondo
 		var bckGrSpr = new Image();
-		bckGrSpr.src = "fondolavita.png";
+		bckGrSpr.src = "resources/fondolavita.png";
 
 		//Se crean los objetos y se inicializan los arrays que determinan los niveles
 		var ball =  new Ball(350,700);
@@ -110,7 +110,7 @@
 			
 			//Sprites
 			var playerSpr = new Image();
-			playerSpr.src = "barrita.png";
+			playerSpr.src = "resources/barrita.png";
 			
 			//Getters y Setters
 			this.getX = function()
@@ -144,7 +144,7 @@
 			
 			//Devuelve al estado por defecto del jugador
 			function noPowerUp(){
-				playerSpr.src = "barrita.png";
+				playerSpr.src = "resources/barrita.png";
 			}
 			
 			//Si el jugador tiene un power up se cambia el sprite de barra o la velocidad de la bola
@@ -155,10 +155,10 @@
 			this.powerUp = function(pU)
 			{
 				if (pU == 1){
-					playerSpr.src = "barritaL.png";
+					playerSpr.src = "resources/barritaL.png";
 					setTimeout(noPowerUp, 20000);
 				}else if (pU == 2){
-					playerSpr.src = "barritaP.png";
+					playerSpr.src = "resources/barritaP.png";
 					setTimeout(noPowerUp, 20000);
 				}else if (pU == 3){
 					ball.upSpeed(2);
@@ -204,13 +204,13 @@
 			//Sprites
 			var brickSpr = new Image();
 			if (rand == 1){
-				brickSpr.src = "ladrillito.png";
+				brickSpr.src = "resources/ladrillito.png";
 			}else if (rand == 2){
-				brickSpr.src = "ladrillito2.png";
+				brickSpr.src = "resources/ladrillito2.png";
 			}else if (rand == 3){
-				brickSpr.src = "ladrillito3.png";
+				brickSpr.src = "resources/ladrillito3.png";
 			}else if (rand == 4){
-				brickSpr.src = "ladrillito4.png";
+				brickSpr.src = "resources/ladrillito4.png";
 			}
 			
 			
@@ -255,13 +255,13 @@
 			//Se determina el sprite a usar en función del tipo de power up
 			var powerSpr = new Image();
 			if (type == 1){
-				powerSpr.src = "power1.png";
+				powerSpr.src = "resources/power1.png";
 			}else if (type == 2){
-				powerSpr.src = "power2.png";
+				powerSpr.src = "resources/power2.png";
 			}else if (type == 3){
-				powerSpr.src = "power3.png";
+				powerSpr.src = "resources/power3.png";
 			}else if (type == 4){
-				powerSpr.src = "power4.png";
+				powerSpr.src = "resources/power4.png";
 			}
 			
 			//Setters y getters
@@ -316,7 +316,7 @@
 			
 			//Variables Sprite
 			var ballSpr = new Image();
-			ballSpr.src = "pelota.png";
+			ballSpr.src = "resources/pelota.png";
 			
 			//Getters, setters y reset
 			this.getPos = function()
